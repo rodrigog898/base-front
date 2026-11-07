@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './app.vue',
+    './app/components/**/*.{js,vue,ts}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue',
+    './app/plugins/**/*.{js,ts}',
+    './app/app.vue',
   ],
   theme: {
     extend: {
@@ -14,6 +14,7 @@ export default {
           50: '#f5f3ff',
           100: '#ede9fe',
           200: '#ddd6fe',
+          300: '#c4b5fd',
           500: '#8b5cf6',
           600: '#7c3aed',
           700: '#6d28d9',

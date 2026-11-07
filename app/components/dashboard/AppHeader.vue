@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const auth = useAuth()
+</script>
+
 <template>
   <header class="flex items-center justify-between gap-4 px-6 py-4 lg:px-8">
     <h1 class="text-xl font-semibold text-gray-900">Dashboard</h1>
@@ -33,6 +37,17 @@
         </button>
         <button type="button" class="rounded-lg px-2.5 py-2 text-sm font-semibold text-gray-500 transition hover:bg-white hover:text-gray-700" aria-label="Tamaño de texto">
           AA
+        </button>
+      </div>
+
+      <div v-if="auth.user.value" class="flex items-center gap-2 border-l border-gray-200 pl-3">
+        <span class="hidden text-sm text-gray-600 md:inline">{{ auth.user.value.email }}</span>
+        <button
+          type="button"
+          class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition hover:bg-white hover:text-gray-900"
+          @click="auth.logout()"
+        >
+          Salir
         </button>
       </div>
     </div>
